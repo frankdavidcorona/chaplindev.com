@@ -7,18 +7,18 @@ import { Analytics } from "./components/analytics";
 
 export const metadata: Metadata = {
   title: {
-    default: "chaplin.dev",
-    template: "%s | chaplin.dev",
+    default: "chaplindev.com",
+    template: "%s | chaplindev.com",
   },
   description: "Software engineer at SamSystems.io",
   openGraph: {
-    title: "chaplin.dev",
+    title: "chaplindev.com",
     description: "Software engineer at SamSystems.io",
-    url: "https://chaplin.dev",
-    siteName: "chaplin.dev",
+    url: "https://chaplindev.com",
+    siteName: "chaplindev.com",
     images: [
       {
-        url: "https://chaplin.dev/og.png",
+        url: "https://chaplindev.com/og.png",
         width: 1920,
         height: 1080,
       },
