@@ -2,8 +2,10 @@ import { Metadata } from "next";
 import { Inter } from "next/font/google";
 import LocalFont from "next/font/local";
 
+// https://vercel.com/docs/concepts/analytics/quickstart
+import { Analytics } from "@vercel/analytics/react";
+
 import "../global.css";
-import { Analytics } from "./components/analytics";
 
 export const metadata: Metadata = {
   title: {
@@ -38,7 +40,7 @@ export const metadata: Metadata = {
     },
   },
   twitter: {
-    title: "Chronark",
+    title: "Chaplindev",
     card: "summary_large_image",
   },
   icons: {
@@ -62,15 +64,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={[inter.variable, calSans.variable].join(" ")}>
-      <head>
-        <Analytics />
-      </head>
+      <head></head>
       <body
         className={`bg-black ${
           process.env.NODE_ENV === "development" ? "debug-screens" : undefined
         }`}
       >
         {children}
+        <Analytics />
       </body>
     </html>
   );
