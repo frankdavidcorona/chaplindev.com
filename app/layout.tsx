@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     },
   },
   twitter: {
-    title: "Chronark",
+    title: "Chaplindev",
     card: "summary_large_image",
   },
   icons: {
