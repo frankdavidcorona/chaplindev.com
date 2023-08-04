@@ -12,10 +12,12 @@ export const metadata: Metadata = {
     default: "Hi, I'm Chaplindev",
     template: "%s | chaplindev.com",
   },
-  description: "Software Engineer at SamSystems.io",
+  description:
+    "Software Engineer, experienced in Finance, Medical, and HR sectors. UI/UX connoisseur. Propelling digital innovation",
   openGraph: {
     title: "Hi, I'm Chaplindev",
-    description: "Software Engineer at SamSystems.io",
+    description:
+      "Software Engineer, experienced in Finance, Medical, and HR sectors. UI/UX connoisseur. Propelling digital innovation",
     url: "https://chaplindev.com",
     siteName: "chaplindev.com",
     images: [
