@@ -101,7 +101,7 @@ export default async function ExperiencePage() {
                   </div>
 
                   {/* Footer */}
-                  <div className="flex flex-col lg:flex-row text-xs lg:gap-5 text-zinc-300 font-semibold mt-3">
+                  <div className="flex flex-col lg:flex-row text-xs lg:gap-5 text-zinc-300 font-semibold mt-3 gap-2">
                     {/* Role */}
                     <div className="flex align-middle gap-2">
                       <User className="w-4" />
