@@ -2,7 +2,7 @@ import Link from "next/link";
 import React from "react";
 
 import { get } from "@vercel/edge-config";
-import { MapPin, User, Clock } from "lucide-react";
+import { MapPin, User, Clock, Calendar } from "lucide-react";
 import Flag from "react-flagkit";
 
 import { calculateDateDiff } from "@/util/dates";
@@ -57,7 +57,7 @@ export default async function ExperiencePage() {
         </div>
         <div className="w-full h-px bg-zinc-800" />
 
-        <div className="grid grid-cols-1 gap-8 mx-auto lg:grid-cols-2 ">
+        <div className="grid grid-cols-1 gap-8 mx-auto lg:grid-cols-2">
           {projects.map((project) => (
             <Card key={project.id}>
               <Link href={project.url} target="_blank" as={project.url}>
@@ -101,25 +101,26 @@ export default async function ExperiencePage() {
                   </div>
 
                   {/* Footer */}
-                  <div className="flex flex-col md:flex-row md:gap-6 text-zinc-300 font-semibold">
+                  <div className="flex flex-col lg:flex-row text-xs lg:gap-5 text-zinc-300 font-semibold mt-3">
                     {/* Role */}
-                    <div className="flex flex-row gap-2 align-end  mt-6">
+                    <div className="flex align-middle gap-2">
                       <User className="w-4" />
-                      <div>{project.role}</div>
+                      <div className="mt-1">{project.role}</div>
                     </div>
                     {/* Type */}
-                    <div className="flex flex-row gap-2 align-end mt-6">
+                    <div className="flex flex-row gap-2 align-end">
                       <Clock className="w-4" />
-                      <div>{project.type}</div>
+                      <div className="mt-1">{project.type}</div>
                     </div>
                     {/* Location */}
-                    <div className="flex flex-row gap-2 align-end mt-6">
+                    <div className="flex flex-row gap-2 align-end">
                       <MapPin className="w-4" />
                       <Flag country={project.country} className="w-4" />
-                      <div>{project.location}</div>
+                      <div className="mt-1">{project.location}</div>
                     </div>
-                    <div className="flex flex-row gap-2 align-end mt-6">
-                      <span className="">{getDuration(project)}</span>
+                    <div className="flex flex-row gap-2 align-end">
+                      <Calendar className="w-4" />
+                      <span className="mt-1">{getDuration(project)}</span>
                     </div>
                   </div>
                 </article>
