@@ -37,8 +37,8 @@ export default function Home() {
         <h2 className="text-sm text-zinc-500 ">
           Hi, my name is Frank Corona, I'm Software Engineer with 10+ yrs in
           software development. Experienced in Finance, Medical, and HR sectors.
-          UI/UX connoisseur. Propelling digital innovation and building
-          solutions at{" "}
+          UI/UX connoisseur. Propelling digital innovation, building solutions
+          at{" "}
           <Link
             target="_blank"
             href="https://samsystems.io"
