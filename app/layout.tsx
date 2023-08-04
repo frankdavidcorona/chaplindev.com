@@ -9,13 +9,13 @@ import "../global.css";
 
 export const metadata: Metadata = {
   title: {
-    default: "chaplindev.com",
+    default: "Hi, I'm Chaplindev",
     template: "%s | chaplindev.com",
   },
-  description: "Software engineer at SamSystems.io",
+  description: "Software Engineer at SamSystems.io",
   openGraph: {
-    title: "chaplindev.com",
-    description: "Software engineer at SamSystems.io",
+    title: "Hi, I'm Chaplindev",
+    description: "Software Engineer at SamSystems.io",
     url: "https://chaplindev.com",
     siteName: "chaplindev.com",
     images: [
