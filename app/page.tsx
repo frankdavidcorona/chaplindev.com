@@ -53,7 +53,7 @@ export default function Home() {
             href="https://strictlyzero.com"
             className="underline duration-500 hover:text-zinc-300"
           >
-            StrictlyZero
+            Strictly
           </Link>{" "}
         </h2>
       </div>
