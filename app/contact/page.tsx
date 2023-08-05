@@ -1,19 +1,19 @@
 "use client";
-import { Github, Mail, Twitter } from "lucide-react";
+import { Github, Mail, Twitter, Linkedin } from "lucide-react";
 import Link from "next/link";
 import { Navigation } from "../components/nav";
 import { Card } from "../components/card";
 
 const socials = [
   {
-    icon: <Twitter size={20} />,
-    href: "https://twitter.com/chaplindev",
-    label: "Twitter",
-    handle: "@chaplindev",
+    icon: <Linkedin size={20} />,
+    href: "https://www.linkedin.com/in/chaplindev/",
+    label: "Linkedin",
+    handle: "chaplindev",
   },
   {
     icon: <Mail size={20} />,
-    href: "mailto:chaplindev@pm.me@pm.me",
+    href: "mailto:chaplindev@pm.me",
     label: "Email",
     handle: "chaplindev@pm.me",
   },
@@ -23,6 +23,12 @@ const socials = [
     label: "Github",
     handle: "frankdavidcorona",
   },
+  {
+    icon: <Twitter size={20} />,
+    href: "https://twitter.com/chaplindev",
+    label: "Twitter",
+    handle: "@chaplindev",
+  },
 ];
 
 export default function Example() {
@@ -30,7 +36,7 @@ export default function Example() {
     <div className=" bg-gradient-to-tl from-zinc-900/0 via-zinc-900 to-zinc-900/0">
       <Navigation />
       <div className="container flex items-center justify-center min-h-screen px-4 mx-auto">
-        <div className="grid w-full grid-cols-1 gap-8 mx-auto mt-32 sm:mt-0 sm:grid-cols-3 lg:gap-16">
+        <div className="grid w-full grid-cols-1 gap-8 mx-auto mt-32 sm:mt-0 sm:grid-cols-4 lg:gap-8">
           {socials.map((s) => (
             <Card key={s.href}>
               <Link
@@ -46,7 +52,7 @@ export default function Example() {
                   {s.icon}
                 </span>{" "}
                 <div className="z-10 flex flex-col items-center">
-                  <span className="text-xl font-medium duration-150 lg:text-3xl text-zinc-200 group-hover:text-white font-display">
+                  <span className="text-xl font-medium duration-150 lg:text-2xl text-zinc-200 group-hover:text-white font-display">
                     {s.handle}
                   </span>
                   <span className="mt-4 text-sm text-center duration-1000 text-zinc-400 group-hover:text-zinc-200">
