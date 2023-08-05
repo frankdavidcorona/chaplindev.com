@@ -1,4 +1,4 @@
-export default function ExperienceLayout({
+export default function ReferencesLayout({
   children,
 }: {
   children: React.ReactNode;
