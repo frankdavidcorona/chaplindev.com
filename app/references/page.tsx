@@ -75,7 +75,7 @@ export default async function ReferencesPage() {
                     </div>
 
                     {/* Description */}
-                    <p className="mt-4 leading-8 duration-150 text-zinc-400 group-hover:text-zinc-300">
+                    <p className="mt-4 leading-7 duration-150 text-zinc-400 group-hover:text-zinc-300">
                       {project.recommendation}
                     </p>
                   </div>

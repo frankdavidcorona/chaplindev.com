@@ -95,7 +95,7 @@ export default async function ExperiencePage() {
                     </h2>
 
                     {/* Description */}
-                    <p className="mt-4 leading-8 duration-150 text-zinc-400 group-hover:text-zinc-300">
+                    <p className="mt-4 leading-7 duration-150 text-zinc-400 group-hover:text-zinc-300">
                       {project.description}
                     </p>
                   </div>

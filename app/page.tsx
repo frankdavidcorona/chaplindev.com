@@ -74,7 +74,7 @@ export default function Home() {
       </div> */}
 
       {/* Trusters */}
-      <footer className="w-full px-6 flex flex-col gap-3 text-center justify-center md:flex-row md:gap-6 align-middle duration-1000 animate-fade-in">
+      <footer className="w-full px-6 flex flex-col gap-1 text-center justify-center md:flex-row md:gap-6 align-middle duration-1000 animate-fade-in">
         <div className="text-zinc-50  font-extrabold text-sm md:text-xl">
           Trusted By
         </div>
