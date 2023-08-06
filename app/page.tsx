@@ -6,6 +6,7 @@ const navigation = [
   { name: "Experience", href: "/experience" },
   { name: "References", href: "/references" },
   { name: "Contact", href: "/contact" },
+  { name: "Buy Me a Book!", href: "https://bmc.link/chaplindev" },
 ];
 
 const trusters = [
