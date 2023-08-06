@@ -8,6 +8,14 @@ const navigation = [
   { name: "Contact", href: "/contact" },
 ];
 
+const trusters = [
+  { name: "SAM Systems", href: "https://samsystems.io" },
+  { name: "Strictly", href: "https://strictlyzero.com" },
+  { name: "Primavera", href: "https://primavera.care/" },
+  { name: "agile dream team", href: "https://agiledreamteam.com/" },
+  { name: "RefineAI", href: "https://refineai.squarespace.com/" },
+];
+
 export default function Home() {
   return (
     <div className="flex flex-col items-center justify-center w-screen h-screen overflow-hidden bg-gradient-to-tl from-black via-zinc-600/20 to-black">
@@ -35,7 +43,7 @@ export default function Home() {
 
       <div className="hidden w-screen h-px animate-glow md:block animate-fade-right bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" />
       <div className="my-16 text-center animate-fade-in max-w-4xl">
-        <h2 className="text-sm text-zinc-500 ">
+        <h2 className="text-sm text-zinc-500 px-6">
           Hi, my name is Frank Corona, I'm Software Engineer with 10+ yrs in
           software development. Experienced in Finance, Medical, and HR sectors.
           UI/UX connoisseur. Propelling digital innovation, building solutions
@@ -58,6 +66,25 @@ export default function Home() {
           </Link>{" "}
         </h2>
       </div>
+
+      {/* ✅ Work on this feature */}
+      {/* <div className="hover:rounded-xl py-3 px-4 mb-12 font-extrabold text-slate-800 bg-zinc-200 rounded hover:cursor-pointer duration-1000 animate-fade-in">
+        Download Resume
+      </div> */}
+
+      {/* Trusters */}
+      <footer className="w-full px-6 flex flex-col gap-3 text-center justify-center md:flex-row md:gap-6 align-middle duration-1000 animate-fade-in">
+        <div className="text-zinc-50  font-extrabold text-sm md:text-xl">
+          Trusted By
+        </div>
+        {trusters.map((item) => (
+          <Link key={item.name} href={item.href} target="_blank">
+            <span className="text-zinc-500 hover:text-zinc-300 hover:duration-1000 font-extrabold text-sm md:text-xl">
+              {item.name}
+            </span>
+          </Link>
+        ))}
+      </footer>
     </div>
   );
 }
