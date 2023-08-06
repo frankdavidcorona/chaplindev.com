@@ -67,8 +67,13 @@ export default function Home() {
         </h2>
       </div>
 
+      {/* ✅ Work on this feature */}
+      {/* <div className="hover:rounded-xl py-3 px-4 mb-12 font-extrabold text-slate-800 bg-zinc-200 rounded hover:cursor-pointer duration-1000 animate-fade-in">
+        Download Resume
+      </div> */}
+
       {/* Trusters */}
-      <div className="w-full px-6 flex flex-col gap-3 text-center justify-center md:flex-row md:gap-6 align-middle duration-1000 text-edge-outline animate-title">
+      <footer className="w-full px-6 flex flex-col gap-3 text-center justify-center md:flex-row md:gap-6 align-middle duration-1000 animate-fade-in">
         <div className="text-zinc-50  font-extrabold text-sm md:text-xl">
           Trusted By
         </div>
@@ -79,7 +84,7 @@ export default function Home() {
             </span>
           </Link>
         ))}
-      </div>
+      </footer>
     </div>
   );
 }
