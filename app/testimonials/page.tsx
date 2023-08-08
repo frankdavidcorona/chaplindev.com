@@ -1,11 +1,11 @@
-import Link from "next/link";
 import React from "react";
+import Link from "next/link";
+import Image from "next/image";
 
 import { get } from "@vercel/edge-config";
 
 import { Card } from "../components/card";
 import { Navigation } from "../components/nav";
-import Image from "next/image";
 
 type Reference = {
   id: number;
@@ -21,8 +21,8 @@ type Response = {
 };
 
 export const revalidate = 60;
-export default async function ReferencesPage() {
-  const { data: recommendations } = (await get("recommendations")) as Response;
+export default async function TestimonialsPage() {
+  const { data: testimonials } = (await get("recommendations")) as Response;
 
   return (
     <div className="relative pb-16">
@@ -30,7 +30,7 @@ export default async function ReferencesPage() {
       <div className="px-6 pt-16 mx-auto space-y-8 max-w-7xl lg:px-8 md:space-y-16 md:pt-24 lg:pt-32">
         <div className="max-w-2xl mx-auto lg:mx-0">
           <h2 className="text-3xl font-bold tracking-tight text-zinc-100 sm:text-4xl">
-            Recommendations
+            Testimonials
           </h2>
           <p className="mt-4 text-zinc-400">
             Valued Voices: Professional Endorsements and Colleague Testimonials.
@@ -39,9 +39,9 @@ export default async function ReferencesPage() {
         <div className="w-full h-px bg-zinc-800" />
 
         <div className="grid grid-cols-1 gap-8 mx-auto lg:grid-cols-2">
-          {recommendations.map((project) => (
-            <Card key={project.id}>
-              <Link href={project.url} target="_blank" as={project.url}>
+          {testimonials.map((testomonial) => (
+            <Card key={testomonial.id}>
+              <Link href={testomonial.url} target="_blank" as={testomonial.url}>
                 <article className="flex flex-col w-full h-full p-4 md:p-8 justify-between">
                   {/* Container */}
                   <div className="w-full">
@@ -49,7 +49,7 @@ export default async function ReferencesPage() {
                     <div className="flex items-center justify-between gap-2">
                       <div className="text-xs text-zinc-100">
                         <div className="flex flex-row gap-2 uppercase font-semibold">
-                          {project.title}
+                          {testomonial.title}
                         </div>
                       </div>
                     </div>
@@ -59,7 +59,7 @@ export default async function ReferencesPage() {
                       <Image
                         className="rounded-full w-12 h-12 bg-zinc-400 hidden sm:block"
                         alt="avatar"
-                        src={`/avatars/${project.avatar}.jpeg`}
+                        src={`/avatars/${testomonial.avatar}.jpeg`}
                         width={12}
                         height={12}
                         priority
@@ -70,13 +70,13 @@ export default async function ReferencesPage() {
                         id="featured-post"
                         className="text-3xl font-bold text-zinc-100 group-hover:text-white sm:text-4xl font-display"
                       >
-                        {project.name}
+                        {testomonial.name}
                       </h2>
                     </div>
 
                     {/* Description */}
                     <p className="mt-4 leading-7 duration-150 text-zinc-400 group-hover:text-zinc-300">
-                      {project.recommendation}
+                      {testomonial.recommendation}
                     </p>
                   </div>
                 </article>
