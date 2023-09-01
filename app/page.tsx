@@ -38,7 +38,7 @@ export default function Home() {
         className="absolute inset-0 -z-10 animate-fade-in"
         quantity={100}
       />
-      <h1 className="z-10 text-4xl text-transparent duration-1000 bg-white cursor-default text-edge-outline animate-title font-display sm:text-6xl md:text-9xl whitespace-nowrap bg-clip-text ">
+      <h1 className="z-10 text-4xl text-transparent duration-500 bg-white cursor-default text-edge-outline animate-title font-display sm:text-6xl md:text-9xl whitespace-nowrap bg-clip-text ">
         chaplindev
       </h1>
 
@@ -69,18 +69,18 @@ export default function Home() {
       </div>
 
       {/* ✅ Work on this feature */}
-      {/* <div className="hover:rounded-xl py-3 px-4 mb-12 font-extrabold text-slate-800 bg-zinc-200 rounded hover:cursor-pointer duration-1000 animate-fade-in">
+      {/* <div className="hover:rounded-xl py-3 px-4 mb-12 font-extrabold text-slate-800 bg-zinc-200 rounded hover:cursor-pointer duration-500 animate-fade-in">
         Download Resume
       </div> */}
 
       {/* Trusters */}
-      <footer className="w-full px-6 flex flex-col gap-1 text-center justify-center md:flex-row md:gap-6 align-middle duration-1000 animate-fade-in">
+      <footer className="w-full px-6 flex flex-col gap-1 text-center justify-center md:flex-row md:gap-6 align-middle duration-500 animate-fade-in">
         <div className="text-zinc-50  font-extrabold text-sm md:text-xl">
           Trusted By
         </div>
         {trusters.map((item) => (
           <Link key={item.name} href={item.href} target="_blank">
-            <span className="text-zinc-500 hover:text-zinc-300 hover:duration-1000 font-extrabold text-sm md:text-xl">
+            <span className="text-zinc-500 hover:text-zinc-300 hover:duration-500 font-extrabold text-sm md:text-xl">
               {item.name}
             </span>
           </Link>
