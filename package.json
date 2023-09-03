@@ -9,7 +9,7 @@
     "fmt": "pnpm rome check . --apply-suggested && pnpm rome format . --write"
   },
   "dependencies": {
-    "@types/node": "20.5.7",
+    "@types/node": "20.5.9",
     "@types/react": "18.2.21",
     "@types/react-dom": "18.2.7",
     "@vercel/analytics": "1.0.2",
@@ -23,7 +23,7 @@
     "react-flagkit": "2.0.4",
     "react-wrap-balancer": "1.1.0",
     "rehype-autolink-headings": "6.1.1",
-    "rehype-pretty-code": "0.10.0",
+    "rehype-pretty-code": "0.10.1",
     "rehype-slug": "6.0.0",
     "remark-gfm": "3.0.1",
     "typescript": "5.2.2"
