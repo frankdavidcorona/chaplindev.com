@@ -9,7 +9,7 @@ const navigation = [
   { name: "Buy Me a Book!", href: "https://bmc.link/chaplindev" },
 ];
 
-const trusters = [
+const trustees = [
   { name: "SAM Systems", href: "https://samsystems.io" },
   { name: "Strictly", href: "https://strictlyzero.com" },
   { name: "Primavera", href: "https://primavera.care/" },
@@ -64,6 +64,16 @@ export default function Home() {
           >
             Strictly
           </Link>{" "}
+            <br/>
+            <br/>
+            CEO & Founder of{' '}
+            <Link
+            target="_blank"
+            href="https://synersib.com"
+            className="underline duration-500 hover:text-zinc-300"
+        >
+            SynerSib Consulting SAS
+        </Link>{" "}
         </h2>
       </div>
 
@@ -72,12 +82,12 @@ export default function Home() {
         Download Resume
       </div> */}
 
-      {/* Trusters */}
+      {/* Trustees */}
       <footer className="w-full px-6 flex flex-col gap-1 text-center justify-center md:flex-row md:gap-6 align-middle duration-500 animate-fade-in">
         <div className="text-zinc-50  font-extrabold text-sm md:text-xl">
           Trusted By
         </div>
-        {trusters.map((item) => (
+        {trustees.map((item) => (
           <Link key={item.name} href={item.href} target="_blank">
             <span className="text-zinc-500 hover:text-zinc-300 hover:duration-500 font-extrabold text-sm md:text-xl">
               {item.name}
