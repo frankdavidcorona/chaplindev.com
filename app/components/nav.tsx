@@ -1,7 +1,7 @@
-"use client";
-import { ArrowLeft } from "lucide-react";
-import Link from "next/link";
-import React, { useEffect, useRef, useState } from "react";
+'use client';
+import { ArrowLeft } from 'lucide-react';
+import Link from 'next/link';
+import React, { useEffect, useRef, useState } from 'react';
 
 export const Navigation: React.FC = () => {
   const ref = useRef<HTMLElement>(null);
@@ -20,14 +20,14 @@ export const Navigation: React.FC = () => {
   return (
     <header ref={ref}>
       <div
-        className={`fixed inset-x-0 top-0 z-50 backdrop-blur  duration-200 border-b  ${
+        className={`fixed inset-x-0 top-0 z-50 border-b  backdrop-blur duration-200  ${
           isIntersecting
-            ? "bg-zinc-900/0 border-transparent"
-            : "bg-zinc-900/500  border-zinc-800 "
+            ? 'border-transparent bg-zinc-900/0'
+            : 'bg-zinc-900/500  border-zinc-800 '
         }`}
       >
-        <div className="container flex flex-row-reverse items-center justify-between p-6 mx-auto">
-          <div className="flex justify-between gap-8">
+        <div className='container mx-auto flex flex-row-reverse items-center justify-between p-6'>
+          <div className='flex justify-between gap-8'>
             {/* <Link
               href="/projects"
               className="duration-200 text-zinc-400 hover:text-zinc-100"
@@ -35,18 +35,18 @@ export const Navigation: React.FC = () => {
               Projects
             </Link> */}
             <Link
-              href="/contact"
-              className="duration-200 text-zinc-400 hover:text-zinc-100"
+              href='/contact'
+              className='text-zinc-400 duration-200 hover:text-zinc-100'
             >
               Contact
             </Link>
           </div>
 
           <Link
-            href="/"
-            className="duration-200 text-zinc-300 hover:text-zinc-100"
+            href='/'
+            className='text-zinc-300 duration-200 hover:text-zinc-100'
           >
-            <ArrowLeft className="w-6 h-6 " />
+            <ArrowLeft className='h-6 w-6 ' />
           </Link>
         </div>
       </div>
