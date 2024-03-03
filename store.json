@@ -1,0 +1,118 @@
+{
+  "projects": {
+    "data": [
+      {
+        "id": 1,
+        "company": "Strictly",
+        "description": "Led cross-functional teams for successful product launches and updates, enhancing end-user satisfaction. Mentored junior developers and promoted professional growth within the team, resulting in increased productivity levels. Collaborated closely with stakeholders to gather requirements and translate them into technical solutions, aligning business objectives with development efforts.Fostered a culture of learning within the team, encouraging continuous skill development through training programs and industry conferences.",
+        "url": "https://strictlyzero.com/",
+        "role": "Senior Software Engineering Manager",
+        "startdate": "2022-12-01",
+        "enddate": "2024-03-13",
+        "companyCountry": "US",
+        "active": true
+      },
+      {
+        "id": 2,
+        "company": "SAM Systems",
+        "description": "Collaborated with cross-functional teams to design innovative software solutions. Streamlined development workflows, increasing team efficiency and reducing time spent on repetitive tasks. Introduced automation tools for efficient deployment processes, minimizing downtime during updates. Developed scalable applications using agile methodologies for timely project delivery. Implemented robust security measures to protect sensitive data and ensure system integrity. Proactively identified areas for process improvement, implementing changes that led to significant time savings for the team. Mentored junior developers, fostering professional growth and enhancing team productivity. Enhanced software functionality by identifying and resolving complex technical issues. Optimized code performance for improved user experience and system efficiency.",
+        "url": "https://www.samsystems.io/",
+        "role": "Senior Software Engineer",
+        "startdate": "2017-03-03",
+        "enddate": "2022-12-01",
+        "companyCountry": "US",
+        "active": false
+      },
+      {
+        "id": 3,
+        "company": "RefineAI",
+        "description": "Contributed to a positive team environment through effective communication, problem-solving, and collaboration skills. Optimized application performance by conducting regular code reviews and refactoring when necessary. Developed customized software solutions for diverse clients, resulting in increased satisfaction and repeat business.",
+        "url": "https://refineai.squarespace.com/",
+        "role": "Software Developer",
+        "startdate": "2017-03-03",
+        "enddate": "2017-06-19",
+        "companyCountry": "US",
+        "active": false
+      },
+      {
+        "id": 4,
+        "company": "XETID",
+        "description": "Contributed to open-source projects, sharing knowledge with the broader community while gaining valuable insights from other experienced professionals. Optimized algorithms for faster processing, reducing overall computation time. Integrated new technologies into existing systems, increasing capabilities and improving overall performance. Consistently met project deadlines by effectively managing time and prioritizing tasks according to importance.",
+        "url": "https://www.xetid.cu/es",
+        "role": "Software Developer",
+        "startdate": "2015-03-02",
+        "enddate": "2017-03-03",
+        "companyCountry": "CU",
+        "active": false
+      }
+    ]
+  },
+  "recommendations": {
+    "data": [
+      {
+        "id": 1,
+        "name": "Jennifer Caceres Vega",
+        "title": "Software Analyst",
+        "url": "https://www.linkedin.com/in/jennifer-caceres-vega-7412ab187/",
+        "avatar": "jennifer",
+        "recommendation": "Committed, proactive worker with good relationships with teammates."
+      },
+      {
+        "id": 2,
+        "name": "Romilio Corona",
+        "title": "Software Project Leader at Mercado Libre",
+        "url": "https://www.linkedin.com/in/romilio-anibal-corona-prendes-aa7657116/",
+        "avatar": "romilio",
+        "recommendation": "Excellent professional and partner, proactive and always looking for personal and professional enhancement."
+      },
+      {
+        "id": 3,
+        "name": "Anthony A. Marin",
+        "title": "Senior Software Engineer",
+        "url": "https://www.linkedin.com/in/antham22/",
+        "avatar": "anthony",
+        "recommendation": "Frank is an excellent developer who is dutiful and very attentive to the tasks at hand. He is a quick learner and knowledgeable in app architecture, Node, React and AWS."
+      },
+      {
+        "id": 4,
+        "name": "Ana María Leyva Agra",
+        "title": "Quality Engineer",
+        "url": "https://www.linkedin.com/in/ana-mar%C3%ADa-leyva-agra/",
+        "avatar": "ana",
+        "recommendation": "Frank is a good developer, studies new technologies to apply them at work, is a leader and a good team player."
+      },
+      {
+        "id": 5,
+        "name": "Yulier Camilo Garrido Garrido",
+        "title": "Full Stack Developer",
+        "url": "https://www.linkedin.com/in/yulier-camilo-garrido-garrido-9ab402125/",
+        "avatar": "yulier",
+        "recommendation": "Frank David Corona Prendes has high capabilities to take on work with new technologies, frameworks, and libraries, he has excellent knowledge about web development. I have worked with him for 2 years and he is one of the people I would always like to have in my work team."
+      },
+      {
+        "id": 6,
+        "name": "Grabiel Montero Coello",
+        "title": "Software Engineer",
+        "url": "https://www.linkedin.com/in/grabiel-montero-coello/",
+        "avatar": "grabiel",
+        "recommendation": "I known Frank two years ago, excellent in their work and dedication to it, a lover of technology, always looking to increase their knowledge and skills in professional software development, a good co-worker, and especially good at what we do, developing and providing ideas and solutions."
+      },
+      {
+        "id": 7,
+        "name": "Blanca Oliva",
+        "title": "QA Analyst",
+        "url": "https://www.linkedin.com/in/blanca-oliva/",
+        "avatar": "blanca",
+        "recommendation": "Excellent professional, responsible, and analytical. Good SW developer, innovative, teamwork lover, like to investigate and improve himself, good ideas, and excellent work partner."
+      },
+      {
+        "id": 8,
+        "name": "Osmany Castro Espinosa",
+        "title": "Software Developer",
+        "url": "https://www.linkedin.com/in/osmany-castro-espinosa/",
+        "avatar": "osmany",
+        "recommendation": "Excellent programmer with good knowledge in PHP, Python, Django, Angular JS."
+      }
+    ]
+  }
+}
