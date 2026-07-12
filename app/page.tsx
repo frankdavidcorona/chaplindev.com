@@ -1,3 +1,5 @@
+import type { Metadata } from 'next';
+
 import { About } from './components/about';
 import { ContactSection, SiteFooter } from './components/contact-footer';
 import { ExperienceTimeline } from './components/experience-timeline';
@@ -7,6 +9,12 @@ import { SelectedWork } from './components/selected-work';
 import { SiteNav } from './components/site-nav';
 import { Testimonials } from './components/testimonials';
 import { TrustedBy } from './components/trusted-by';
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: '/',
+  },
+};
 
 const personJsonLd = {
   '@context': 'https://schema.org',
