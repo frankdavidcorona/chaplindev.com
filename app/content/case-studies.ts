@@ -38,6 +38,31 @@ export const caseStudies = [
     disclosureNote:
       'Details are intentionally limited to protect client and platform confidentiality.',
   },
+  {
+    slug: 'preventing-duplicate-settlement',
+    title: 'Preventing duplicate transaction settlement',
+    eyebrow: 'Payment correctness',
+    organization: 'Strictly',
+    summary:
+      'Reduced the risk of concurrent settlement work processing the same transaction more than once.',
+    challenge:
+      'Settlement correctness is a financial-risk boundary. Retried or concurrent work needed a shared coordination mechanism rather than relying on process-local state.',
+    constraints: [
+      'Preserve the existing settlement workflow and its production behavior.',
+      'Coordinate across service instances rather than within one process.',
+      'Make failures visible enough for production operators to investigate.',
+    ],
+    approach: [
+      'Introduced distributed locking around the settlement-critical section.',
+      'Added automated monitoring for duplicate-settlement risk signals.',
+      'Kept the change focused on correctness rather than broad workflow redesign.',
+    ],
+    outcome:
+      'The settlement path gained cross-instance coordination and automated monitoring designed to prevent duplicate processing.',
+    role: 'Engineering leadership, architecture, delivery oversight, and production-risk ownership.',
+    disclosureNote:
+      'Details are intentionally limited to protect client and platform confidentiality.',
+  },
 ] as const satisfies readonly CaseStudy[];
 
 export function getCaseStudy(slug: string) {
