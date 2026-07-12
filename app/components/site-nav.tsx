@@ -5,6 +5,7 @@ import { TrackedLink } from './tracked-link';
 
 const links = [
   { name: 'About', href: '#about' },
+  { name: 'Work', href: '#work' },
   { name: 'Experience', href: '#experience' },
   { name: 'Testimonials', href: '#testimonials' },
 ];

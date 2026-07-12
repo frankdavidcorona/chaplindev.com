@@ -51,11 +51,11 @@ export function Hero() {
         </p>
         <div className='animate-fade-in mt-10 flex flex-wrap items-center justify-center gap-4'>
           <TrackedLink
-            href='#experience'
+            href='#work'
             eventName='Portfolio CTA'
             eventProperties={{
               location: 'hero',
-              intent: 'view-experience',
+              intent: 'view-case-studies',
             }}
             className='bg-accent shadow-accent/40 hover:bg-accent/90 rounded-full px-6 py-2.5 text-sm font-semibold text-zinc-950 shadow-[0_0_24px] duration-200'
           >
