@@ -4,6 +4,8 @@
 @theme {
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
   --font-display: var(--font-calsans);
+  --color-accent: oklch(0.72 0.16 285);
+  --color-accent-muted: oklch(0.72 0.16 285 / 30%);
   --background-image-gradient-radial: radial-gradient(
     50% 50% at 50% 50%,
     var(--tw-gradient-stops)
@@ -12,6 +14,7 @@
   --animate-title: title 1.5s ease-out forwards;
   --animate-fade-left: fade-left 1.5s ease-in-out forwards;
   --animate-fade-right: fade-right 1.5s ease-in-out forwards;
+  --animate-pulse-dot: pulse-dot 2.5s ease-out infinite;
 }
 
 @keyframes fade-in {
@@ -71,8 +74,85 @@
   }
 }
 
+@keyframes pulse-dot {
+  0% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+  70%,
+  100% {
+    transform: scale(2.5);
+    opacity: 0;
+  }
+}
+
+/* Light theme: utilities resolve colors via var(--color-*), so remapping the
+   palette here re-themes every component without touching markup. The zinc
+   scale is inverted; the accent is darkened to keep AA contrast on white. */
+:root {
+  color-scheme: dark;
+}
+
+:root[data-theme='light'] {
+  color-scheme: light;
+  --color-accent: oklch(0.5 0.19 285);
+  --color-accent-muted: oklch(0.5 0.19 285 / 30%);
+  --color-white: oklch(0.141 0.005 285.823);
+  --color-black: oklch(0.985 0 0);
+  --color-zinc-50: oklch(0.141 0.005 285.823);
+  --color-zinc-100: oklch(0.21 0.006 285.885);
+  --color-zinc-200: oklch(0.274 0.006 286.033);
+  --color-zinc-300: oklch(0.37 0.013 285.805);
+  --color-zinc-400: oklch(0.442 0.017 285.786);
+  --color-zinc-600: oklch(0.871 0.006 286.286);
+  --color-zinc-700: oklch(0.871 0.006 286.286);
+  --color-zinc-800: oklch(0.92 0.004 286.32);
+  --color-zinc-900: oklch(0.967 0.001 286.375);
+  --color-zinc-950: oklch(0.985 0 0);
+}
+
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  ::selection {
+    background-color: var(--color-accent-muted);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+  }
+
+  section[id] {
+    scroll-margin-top: 5rem;
+  }
+
   .text-edge-outline {
     -webkit-text-stroke: 1px rgba(255, 255, 255, 0.3);
+  }
+
+  .bg-grain::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    opacity: 0.025;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
   }
 }

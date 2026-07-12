@@ -1,26 +1,21 @@
 export const calculateDateDiff = (start: string, end: string | Date) => {
-  let startDate: Date = new Date(start);
-  let endDate: Date = new Date(end);
+  const startDate = new Date(start);
+  const endDate = new Date(end);
 
-  let years: number, months: number, days: number;
+  let years = endDate.getFullYear() - startDate.getFullYear();
+  let months = endDate.getMonth() - startDate.getMonth();
+  let days = endDate.getDate() - startDate.getDate();
 
-  years = endDate.getFullYear() - startDate.getFullYear();
-  startDate.setFullYear(startDate.getFullYear() + years);
-
-  if (startDate > endDate) {
-    years--;
-    startDate.setFullYear(startDate.getFullYear() - 1);
-  }
-
-  months = endDate.getMonth() - startDate.getMonth();
-  startDate.setMonth(startDate.getMonth() + months);
-
-  if (startDate > endDate) {
+  if (days < 0) {
     months--;
-    startDate.setMonth(startDate.getMonth() - 1);
+    // borrow the length of the month preceding the end date
+    days += new Date(endDate.getFullYear(), endDate.getMonth(), 0).getDate();
   }
 
-  days = (endDate.getTime() - startDate.getTime()) / (1000 * 60 * 60 * 24);
+  if (months < 0) {
+    years--;
+    months += 12;
+  }
 
   return {
     years,
