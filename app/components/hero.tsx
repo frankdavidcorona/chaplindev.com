@@ -1,6 +1,7 @@
 import Link from 'next/link';
 
 import Particles from './particles';
+import { TrackedLink } from './tracked-link';
 
 export function Hero() {
   return (
@@ -49,18 +50,28 @@ export function Hero() {
           .
         </p>
         <div className='animate-fade-in mt-10 flex flex-wrap items-center justify-center gap-4'>
-          <a
+          <TrackedLink
             href='#experience'
+            eventName='Portfolio CTA'
+            eventProperties={{
+              location: 'hero',
+              intent: 'view-experience',
+            }}
             className='bg-accent shadow-accent/40 hover:bg-accent/90 rounded-full px-6 py-2.5 text-sm font-semibold text-zinc-950 shadow-[0_0_24px] duration-200'
           >
             View payment platform work
-          </a>
-          <a
+          </TrackedLink>
+          <TrackedLink
             href='#contact'
+            eventName='Portfolio CTA'
+            eventProperties={{
+              location: 'hero',
+              intent: 'platform-inquiry',
+            }}
             className='rounded-full border border-zinc-700 px-6 py-2.5 text-sm font-semibold text-zinc-200 duration-200 hover:border-zinc-500 hover:text-white'
           >
             Discuss a platform challenge
-          </a>
+          </TrackedLink>
         </div>
       </div>
     </header>
