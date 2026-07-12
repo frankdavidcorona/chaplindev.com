@@ -1,100 +1,59 @@
-import Link from 'next/link';
-import React from 'react';
-import Particles from './components/particles';
+import { About } from './components/about';
+import { ContactSection, SiteFooter } from './components/contact-footer';
+import { ExperienceTimeline } from './components/experience-timeline';
+import { Hero } from './components/hero';
+import { Reveal } from './components/reveal';
+import { SiteNav } from './components/site-nav';
+import { Testimonials } from './components/testimonials';
+import { TrustedBy } from './components/trusted-by';
 
-const navigation = [
-  { name: 'Experience', href: '/experience' },
-  { name: 'Testimonials', href: '/testimonials' },
-  { name: 'Contact', href: '/contact' },
-  { name: 'Buy Me a Book!', href: 'https://bmc.link/chaplindev' },
-];
-
-const trustees = [
-  { name: 'SAM Systems', href: 'https://samsystems.io' },
-  { name: 'Strictly', href: 'https://strictlyzero.com' },
-  { name: 'Primavera', href: 'https://primavera.care/' },
-  { name: 'agile dream team', href: 'https://agiledreamteam.com/' },
-  { name: 'RefineAI', href: 'https://refineai.squarespace.com/' },
-];
+const personJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: 'Frank Corona',
+  alternateName: 'chaplindev',
+  jobTitle: 'Senior Software Engineering Manager',
+  url: 'https://chaplindev.com',
+  email: 'mailto:frank.corona@pm.me',
+  worksFor: {
+    '@type': 'Organization',
+    name: 'SynerSib Consulting SAS',
+    url: 'https://synersib.com',
+  },
+  sameAs: [
+    'https://www.linkedin.com/in/chaplindev/',
+    'https://github.com/frankdavidcorona',
+    'https://twitter.com/chaplindev',
+  ],
+};
 
 export default function Home() {
   return (
-    <div className='flex h-screen w-screen flex-col items-center justify-center overflow-hidden bg-gradient-to-tl from-black via-zinc-600/20 to-black'>
-      <nav className='animate-fade-in my-16'>
-        <ul className='flex items-center justify-center gap-4'>
-          {navigation.map(item => (
-            <Link
-              key={item.href}
-              href={item.href}
-              className='text-sm text-zinc-500 duration-500 hover:text-zinc-300'
-            >
-              {item.name}
-            </Link>
-          ))}
-        </ul>
-      </nav>
-      <div className='animate-fade-left hidden h-px w-screen bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0 md:block' />
-      <Particles
-        className='animate-fade-in absolute inset-0 -z-10'
-        quantity={100}
+    <>
+      <script
+        type='application/ld+json'
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
       />
-      <h1 className='text-edge-outline animate-title font-display z-10 cursor-default bg-white bg-clip-text text-4xl whitespace-nowrap text-transparent duration-500 sm:text-6xl md:text-9xl'>
-        chaplindev
-      </h1>
-
-      <div className='animate-fade-right hidden h-px w-screen bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0 md:block' />
-      <div className='animate-fade-in my-16 max-w-4xl text-center'>
-        <h2 className='px-6 text-sm text-zinc-500'>
-          Hi, my name is Frank Corona, Father, Husband & Computer Science
-          Engineer, experienced in Finance, Medical, and HR industries.
-          Committed to propelling digital innovation, building solutions at{' '}
-          <Link
-            target='_blank'
-            href='https://synersib.com'
-            className='underline duration-500 hover:text-zinc-300'
-          >
-            SynerSib
-          </Link>
-          <br />
-          and working on{' '}
-          <Link
-            target='_blank'
-            href='https://strictlyzero.com'
-            className='underline duration-500 hover:text-zinc-300'
-          >
-            Strictly
-          </Link>{' '}
-          <br />
-          <br />
-          CEO & Founder of{' '}
-          <Link
-            target='_blank'
-            href='https://synersib.com'
-            className='underline duration-500 hover:text-zinc-300'
-          >
-            SynerSib Consulting SAS
-          </Link>{' '}
-        </h2>
-      </div>
-
-      {/* ✅ Work on this feature */}
-      {/* <div className="hover:rounded-xl py-3 px-4 mb-12 font-extrabold text-slate-800 bg-zinc-200 rounded hover:cursor-pointer duration-500 animate-fade-in">
-        Download Resume
-      </div> */}
-
-      {/* Trustees */}
-      <footer className='animate-fade-in flex w-full flex-col justify-center gap-1 px-6 text-center align-middle duration-500 md:flex-row md:gap-6'>
-        <div className='text-sm font-extrabold text-zinc-50 md:text-xl'>
-          Trusted By
-        </div>
-        {trustees.map(item => (
-          <Link key={item.name} href={item.href} target='_blank'>
-            <span className='text-sm font-extrabold text-zinc-500 hover:text-zinc-300 hover:duration-500 md:text-xl'>
-              {item.name}
-            </span>
-          </Link>
-        ))}
-      </footer>
-    </div>
+      <SiteNav />
+      <main id='main'>
+        <Hero />
+        <Reveal>
+          <TrustedBy />
+        </Reveal>
+        <Reveal>
+          <About />
+        </Reveal>
+        <Reveal>
+          <ExperienceTimeline />
+        </Reveal>
+        <Reveal>
+          <Testimonials />
+        </Reveal>
+        <Reveal>
+          <ContactSection />
+        </Reveal>
+      </main>
+      <SiteFooter />
+    </>
   );
 }
