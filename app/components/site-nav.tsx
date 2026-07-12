@@ -59,7 +59,7 @@ export function SiteNav() {
               href='#contact'
               className='border-accent-muted text-accent hover:border-accent rounded-full border px-4 py-1.5 text-sm font-semibold duration-200'
             >
-              Get in touch
+              Discuss a platform challenge
             </a>
           </div>
         </nav>
