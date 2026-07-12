@@ -6,9 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "test": "node --test",
     "typecheck": "tsc --noEmit",
-    "format": "prettier --write \"app/**/*.tsx\" \"*.{css,js,json,md}\"",
-    "check:format": "prettier --check \"app/**/*.tsx\" \"*.{css,js,json,md}\""
+    "format": "prettier --write \"app/**/*.tsx\" \"tests/**/*.mjs\" \"*.{css,js,json,md}\"",
+    "check:format": "prettier --check \"app/**/*.tsx\" \"tests/**/*.mjs\" \"*.{css,js,json,md}\""
   },
   "engines": {
     "node": ">=22.13"
