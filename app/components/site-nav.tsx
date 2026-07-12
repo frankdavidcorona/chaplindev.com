@@ -1,6 +1,8 @@
 'use client';
 import { useEffect, useRef, useState } from 'react';
 
+import { TrackedLink } from './tracked-link';
+
 const links = [
   { name: 'About', href: '#about' },
   { name: 'Experience', href: '#experience' },
@@ -55,12 +57,17 @@ export function SiteNav() {
                 {link.name}
               </a>
             ))}
-            <a
+            <TrackedLink
               href='#contact'
+              eventName='Portfolio CTA'
+              eventProperties={{
+                location: 'navigation',
+                intent: 'platform-inquiry',
+              }}
               className='border-accent-muted text-accent hover:border-accent rounded-full border px-4 py-1.5 text-sm font-semibold duration-200'
             >
               Discuss a platform challenge
-            </a>
+            </TrackedLink>
           </div>
         </nav>
       </div>

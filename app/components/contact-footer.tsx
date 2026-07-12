@@ -1,5 +1,7 @@
 import { Mail } from 'lucide-react';
 
+import { TrackedLink } from './tracked-link';
+
 import type { SVGProps } from 'react';
 
 function BrandIcon(props: SVGProps<SVGSVGElement>) {
@@ -43,24 +45,52 @@ const socials = [
     href: 'https://www.linkedin.com/in/chaplindev/',
     label: 'LinkedIn',
     handle: 'chaplindev',
+    network: 'linkedin',
   },
   {
     icon: <Mail size={20} aria-hidden='true' />,
     href: 'mailto:frank.corona@pm.me',
     label: 'Email',
     handle: 'frank.corona@pm.me',
+    network: 'email',
   },
   {
     icon: <GitHubIcon />,
     href: 'https://github.com/frankdavidcorona',
     label: 'GitHub',
     handle: 'frankdavidcorona',
+    network: 'github',
   },
   {
     icon: <XIcon />,
     href: 'https://twitter.com/chaplindev',
     label: 'X (Twitter)',
     handle: '@chaplindev',
+    network: 'x',
+  },
+];
+
+const contactIntents = [
+  {
+    label: 'Architecture & risk review',
+    copy: 'Payment architecture, production hardening, certification, or security-risk work.',
+    subject: 'Payment platform architecture inquiry',
+    intent: 'architecture-review',
+    primary: true,
+  },
+  {
+    label: 'Engineering leadership',
+    copy: 'Senior engineering leadership, architecture governance, or delivery ownership.',
+    subject: 'Engineering leadership opportunity',
+    intent: 'engineering-leadership',
+    primary: false,
+  },
+  {
+    label: 'Founder collaboration',
+    copy: 'Fintech product, partnership, or founder-to-founder collaboration.',
+    subject: 'Founder collaboration',
+    intent: 'founder-collaboration',
+    primary: false,
   },
 ];
 
@@ -78,27 +108,51 @@ export function ContactSection() {
         id='contact-heading'
         className='font-display mt-3 text-4xl text-zinc-100 sm:text-6xl'
       >
-        Let&apos;s talk
+        Choose the right conversation
       </h2>
-      <a
-        href='mailto:frank.corona@pm.me'
-        className='bg-accent shadow-accent/40 hover:bg-accent/90 mt-10 inline-flex rounded-full px-8 py-3 text-sm font-semibold text-zinc-950 shadow-[0_0_32px] duration-200'
-      >
-        frank.corona@pm.me
-      </a>
+      <p className='mx-auto mt-5 max-w-2xl text-sm leading-relaxed text-zinc-400 sm:text-base'>
+        Select a starting point and your email client will open with the right
+        context.
+      </p>
+      <div className='mt-10 grid gap-4 text-left md:grid-cols-3'>
+        {contactIntents.map(contactIntent => (
+          <TrackedLink
+            key={contactIntent.intent}
+            href={`mailto:frank.corona@pm.me?subject=${encodeURIComponent(contactIntent.subject)}`}
+            eventName='Contact Intent'
+            eventProperties={{ intent: contactIntent.intent }}
+            className={`rounded-2xl border p-6 duration-200 focus-visible:outline-2 focus-visible:outline-offset-4 ${
+              contactIntent.primary
+                ? 'border-accent bg-accent/10 hover:bg-accent/15 focus-visible:outline-accent'
+                : 'border-zinc-800 bg-zinc-900/40 hover:border-zinc-600 hover:bg-zinc-900/70 focus-visible:outline-zinc-400'
+            }`}
+          >
+            <span className='block text-base font-semibold text-zinc-100'>
+              {contactIntent.label}
+            </span>
+            <span className='mt-3 block text-sm leading-relaxed text-zinc-400'>
+              {contactIntent.copy}
+            </span>
+          </TrackedLink>
+        ))}
+      </div>
       <ul className='mt-12 flex flex-wrap items-center justify-center gap-x-8 gap-y-4'>
         {socials.map(social => (
           <li key={social.href}>
-            <a
+            <TrackedLink
               href={social.href}
-              target='_blank'
-              rel='noopener noreferrer'
+              eventName='Outbound Profile'
+              eventProperties={{ network: social.network }}
+              target={social.network === 'email' ? undefined : '_blank'}
+              rel={
+                social.network === 'email' ? undefined : 'noopener noreferrer'
+              }
               title={social.label}
               className='flex items-center gap-2 text-sm text-zinc-400 duration-200 hover:text-zinc-100'
             >
               {social.icon}
               <span className='font-mono'>{social.handle}</span>
-            </a>
+            </TrackedLink>
           </li>
         ))}
       </ul>
