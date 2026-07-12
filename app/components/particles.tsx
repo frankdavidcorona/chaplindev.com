@@ -39,31 +39,62 @@ export default function Particles({
   const mousePosition = useMousePosition();
   const mouse = useRef<{ x: number; y: number }>({ x: 0, y: 0 });
   const canvasSize = useRef<{ w: number; h: number }>({ w: 0, h: 0 });
+  const dotColor = useRef('rgb(255, 255, 255)');
   const dpr = typeof window !== 'undefined' ? window.devicePixelRatio : 1;
 
   useEffect(() => {
     if (canvasRef.current) {
       context.current = canvasRef.current.getContext('2d');
     }
-    initCanvas();
-    animate();
-    window.addEventListener('resize', initCanvas);
+    const reducedMotion = window.matchMedia(
+      '(prefers-reduced-motion: reduce)'
+    ).matches;
+    const updateDotColor = () => {
+      if (canvasContainerRef.current) {
+        // dots inherit the container's CSS color, so they follow the theme
+        dotColor.current = getComputedStyle(canvasContainerRef.current).color;
+      }
+    };
+    const drawStatic = () => {
+      circles.current.forEach(circle => (circle.alpha = circle.targetAlpha));
+      clearContext();
+      circles.current.forEach(circle => drawCircle(circle, true));
+    };
+    const render = () => {
+      updateDotColor();
+      initCanvas();
+      if (reducedMotion) {
+        drawStatic();
+      }
+    };
+    render();
+    if (!reducedMotion) {
+      animate();
+    }
+    window.addEventListener('resize', render);
+    const themeObserver = new MutationObserver(() => {
+      updateDotColor();
+      if (reducedMotion) {
+        drawStatic();
+      }
+    });
+    themeObserver.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ['data-theme'],
+    });
 
     return () => {
-      window.removeEventListener('resize', initCanvas);
+      window.removeEventListener('resize', render);
+      themeObserver.disconnect();
       if (animationFrame.current !== null) {
         window.cancelAnimationFrame(animationFrame.current);
       }
     };
-  }, []);
+  }, [refresh]);
 
   useEffect(() => {
     onMouseMove();
   }, [mousePosition.x, mousePosition.y]);
-
-  useEffect(() => {
-    initCanvas();
-  }, [refresh]);
 
   const initCanvas = () => {
     resizeCanvas();
@@ -128,8 +159,10 @@ export default function Particles({
       context.current.translate(translateX, translateY);
       context.current.beginPath();
       context.current.arc(x, y, size, 0, 2 * Math.PI);
-      context.current.fillStyle = `rgba(255, 255, 255, ${alpha})`;
+      context.current.globalAlpha = alpha;
+      context.current.fillStyle = dotColor.current;
       context.current.fill();
+      context.current.globalAlpha = 1;
       context.current.setTransform(dpr, 0, 0, dpr, 0, 0);
 
       if (!update) {
