@@ -3,6 +3,7 @@ import { ContactSection, SiteFooter } from './components/contact-footer';
 import { ExperienceTimeline } from './components/experience-timeline';
 import { Hero } from './components/hero';
 import { Reveal } from './components/reveal';
+import { SelectedWork } from './components/selected-work';
 import { SiteNav } from './components/site-nav';
 import { Testimonials } from './components/testimonials';
 import { TrustedBy } from './components/trusted-by';
@@ -42,6 +43,9 @@ export default function Home() {
         </Reveal>
         <Reveal>
           <About />
+        </Reveal>
+        <Reveal>
+          <SelectedWork />
         </Reveal>
         <Reveal>
           <ExperienceTimeline />
