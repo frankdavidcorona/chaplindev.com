@@ -20,7 +20,7 @@ const trustees = [
 export default function Home() {
   return (
     <div className='flex h-screen w-screen flex-col items-center justify-center overflow-hidden bg-gradient-to-tl from-black via-zinc-600/20 to-black'>
-      <nav className='my-16 animate-fade-in'>
+      <nav className='animate-fade-in my-16'>
         <ul className='flex items-center justify-center gap-4'>
           {navigation.map(item => (
             <Link
@@ -33,17 +33,17 @@ export default function Home() {
           ))}
         </ul>
       </nav>
-      <div className='animate-glow hidden h-px w-screen animate-fade-left bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0 md:block' />
+      <div className='animate-fade-left hidden h-px w-screen bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0 md:block' />
       <Particles
-        className='absolute inset-0 -z-10 animate-fade-in'
+        className='animate-fade-in absolute inset-0 -z-10'
         quantity={100}
       />
-      <h1 className='text-edge-outline z-10 animate-title cursor-default whitespace-nowrap bg-white bg-clip-text font-display text-4xl text-transparent duration-500 sm:text-6xl md:text-9xl '>
+      <h1 className='text-edge-outline animate-title font-display z-10 cursor-default bg-white bg-clip-text text-4xl whitespace-nowrap text-transparent duration-500 sm:text-6xl md:text-9xl'>
         chaplindev
       </h1>
 
-      <div className='animate-glow hidden h-px w-screen animate-fade-right bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0 md:block' />
-      <div className='my-16 max-w-4xl animate-fade-in text-center'>
+      <div className='animate-fade-right hidden h-px w-screen bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0 md:block' />
+      <div className='animate-fade-in my-16 max-w-4xl text-center'>
         <h2 className='px-6 text-sm text-zinc-500'>
           Hi, my name is Frank Corona, Father, Husband & Computer Science
           Engineer, experienced in Finance, Medical, and HR industries.
@@ -83,8 +83,8 @@ export default function Home() {
       </div> */}
 
       {/* Trustees */}
-      <footer className='flex w-full animate-fade-in flex-col justify-center gap-1 px-6 text-center align-middle duration-500 md:flex-row md:gap-6'>
-        <div className='text-sm  font-extrabold text-zinc-50 md:text-xl'>
+      <footer className='animate-fade-in flex w-full flex-col justify-center gap-1 px-6 text-center align-middle duration-500 md:flex-row md:gap-6'>
+        <div className='text-sm font-extrabold text-zinc-50 md:text-xl'>
           Trusted By
         </div>
         {trustees.map(item => (
