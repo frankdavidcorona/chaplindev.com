@@ -8,7 +8,7 @@ import { Analytics } from '@vercel/analytics/react';
 import '../global.css';
 
 export const metadata: Metadata = {
-  metadataBase: new URL('http://localhost:3000'),
+  metadataBase: new URL('https://chaplindev.com'),
   title: {
     default: "Hi, I'm Chaplindev",
     template: '%s | chaplindev.com',
@@ -67,10 +67,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en' className={[inter.variable, calSans.variable].join(' ')}>
-      <head></head>
       <body
         className={`bg-black ${
-          process.env.NODE_ENV === 'development' ? 'debug-screens' : undefined
+          process.env.NODE_ENV === 'development' ? 'debug-screens' : ''
         }`}
       >
         {children}

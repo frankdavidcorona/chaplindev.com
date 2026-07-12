@@ -10,17 +10,24 @@ My personal website, built with [Next.js](https://nextjs.org/), [Tailwind CSS](h
 
 ## Running Locally
 
+Use Node.js 24 (see `.nvmrc`) and pnpm 11.12 through Corepack:
+
+```sh-session
+nvm use
+corepack enable
+```
+
 ```sh-session
 git clone https://github.com/frankdavidcorona/chaplin.dev.git
 cd chaplindev.com
 ```
 
-Create a `.env` file similar to [`.env.example`](https://github.com/frankdavidcorona/chaplin.dev/blob/main/.env.example).
+Experience and testimonial data is read directly from `store.json`.
 
-Then install dependencies and run the development server:
+Install dependencies and run the development server:
 
 ```sh-session
-pnpm install
+pnpm install --frozen-lockfile
 pnpm dev
 ```
 

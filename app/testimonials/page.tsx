@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 
-import { get } from '@vercel/edge-config';
+import store from '@/store.json';
 
 import { Card } from '../components/card';
 import { Navigation } from '../components/nav';
@@ -16,13 +16,8 @@ type Reference = {
   avatar: string;
 };
 
-type Response = {
-  data: Reference[];
-};
-
-export const revalidate = 60;
-export default async function TestimonialsPage() {
-  const { data: testimonials } = (await get('recommendations')) as Response;
+export default function TestimonialsPage() {
+  const testimonials = store.recommendations.data as Reference[];
 
   return (
     <div className='relative pb-16'>
@@ -40,7 +35,7 @@ export default async function TestimonialsPage() {
         <div className='mx-auto grid grid-cols-1 gap-8 lg:grid-cols-2'>
           {testimonials.map(testomonial => (
             <Card key={testomonial.id}>
-              <Link href={testomonial.url} target='_blank' as={testomonial.url}>
+              <Link href={testomonial.url} target='_blank'>
                 <article className='flex h-full w-full flex-col justify-between p-4 md:p-8'>
                   {/* Container */}
                   <div className='w-full'>
@@ -59,10 +54,8 @@ export default async function TestimonialsPage() {
                         className='hidden h-12 w-12 rounded-full bg-zinc-400 sm:block'
                         alt='avatar'
                         src={`/avatars/${testomonial.avatar}.jpeg`}
-                        width={12}
-                        height={12}
-                        priority
-                        unoptimized
+                        width={48}
+                        height={48}
                       />
                       {/* Name */}
                       <h2
@@ -74,7 +67,7 @@ export default async function TestimonialsPage() {
                     </div>
 
                     {/* Description */}
-                    <p className='mt-4 leading-relaxed text-sm text-zinc-400 duration-150 group-hover:text-zinc-300'>
+                    <p className='mt-4 text-sm leading-relaxed text-zinc-400 duration-150 group-hover:text-zinc-300'>
                       {testomonial.recommendation}
                     </p>
                   </div>
