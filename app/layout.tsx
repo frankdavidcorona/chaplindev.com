@@ -9,17 +9,17 @@ import '../global.css';
 import { ThemeToggle } from './components/theme-toggle';
 
 const description =
-  'Technical leader in payment technology with over a decade of experience building and hardening production software. Founder & CEO of SynerSib Consulting SAS, driving architecture and delivery at Strictly.';
+  'Payment-platform engineering leader helping teams harden production systems, untangle high-risk architecture, and deliver certification-critical work. Founder of SynerSib Consulting SAS.';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://chaplindev.com'),
   title: {
-    default: 'Frank Corona — Senior Engineering Leader & Founder',
+    default: 'Frank Corona — Payment Platform Engineering Leader',
     template: '%s | chaplindev.com',
   },
   description,
   openGraph: {
-    title: 'Frank Corona — Senior Engineering Leader & Founder',
+    title: 'Frank Corona — Payment Platform Engineering Leader',
     description,
     url: 'https://chaplindev.com',
     siteName: 'chaplindev.com',
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     },
   },
   twitter: {
-    title: 'Frank Corona — Senior Engineering Leader & Founder',
+    title: 'Frank Corona — Payment Platform Engineering Leader',
     card: 'summary_large_image',
   },
   icons: {

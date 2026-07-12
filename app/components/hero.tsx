@@ -18,7 +18,7 @@ export function Hero() {
       />
       <div className='relative z-10 flex flex-col items-center px-6 text-center'>
         <p className='animate-fade-in text-accent font-mono text-xs font-semibold tracking-[0.3em] uppercase sm:text-sm'>
-          Senior Engineering Leader · Founder
+          Payment Platforms · Engineering Leadership
         </p>
         <div className='animate-fade-left my-8 hidden h-px w-screen bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0 md:block' />
         <h1 className='animate-title font-display cursor-default bg-gradient-to-b from-white via-white to-white/60 bg-clip-text py-2 text-4xl whitespace-nowrap text-transparent sm:text-6xl md:text-8xl'>
@@ -26,18 +26,9 @@ export function Hero() {
         </h1>
         <div className='animate-fade-right my-8 hidden h-px w-screen bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0 md:block' />
         <p className='animate-fade-in max-w-2xl text-sm leading-relaxed text-zinc-400 sm:text-base'>
-          Hi, my name is Frank Corona, Father, Husband & Computer Science
-          Engineer, experienced in Finance, Medical, and HR industries.
-          Committed to propelling digital innovation, building solutions at{' '}
-          <Link
-            target='_blank'
-            rel='noopener noreferrer'
-            href='https://synersib.com'
-            className='text-zinc-300 underline underline-offset-4 duration-200 hover:text-white'
-          >
-            SynerSib
-          </Link>{' '}
-          and working on{' '}
+          I help teams harden payment systems, untangle high-risk architecture,
+          and deliver certification-critical work without disrupting production.
+          I lead architecture and delivery at{' '}
           <Link
             target='_blank'
             rel='noopener noreferrer'
@@ -45,8 +36,8 @@ export function Hero() {
             className='text-zinc-300 underline underline-offset-4 duration-200 hover:text-white'
           >
             Strictly
-          </Link>
-          . CEO & Founder of{' '}
+          </Link>{' '}
+          and founded{' '}
           <Link
             target='_blank'
             rel='noopener noreferrer'
@@ -62,13 +53,13 @@ export function Hero() {
             href='#experience'
             className='bg-accent shadow-accent/40 hover:bg-accent/90 rounded-full px-6 py-2.5 text-sm font-semibold text-zinc-950 shadow-[0_0_24px] duration-200'
           >
-            View experience
+            View payment platform work
           </a>
           <a
             href='#contact'
             className='rounded-full border border-zinc-700 px-6 py-2.5 text-sm font-semibold text-zinc-200 duration-200 hover:border-zinc-500 hover:text-white'
           >
-            Get in touch
+            Discuss a platform challenge
           </a>
         </div>
       </div>

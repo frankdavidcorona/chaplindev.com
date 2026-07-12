@@ -55,8 +55,8 @@ export function About() {
           <SectionHeading
             id='about-heading'
             eyebrow='About'
-            title='Professional Summary'
-            subtitle='Demonstrating a Track Record of Excellence in Software Engineering and Agile Project Management'
+            title='Engineering leadership for high-risk systems'
+            subtitle='Payment architecture, certification delivery, production hardening, and cross-team execution.'
           />
         </div>
 
