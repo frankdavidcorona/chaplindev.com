@@ -58,52 +58,78 @@ export default async function ExperiencePage() {
 
         <article className='mx-auto my-6 flex max-w-7xl flex-col gap-3 text-sm leading-relaxed text-zinc-400 md:my-0'>
           <p>
-            With over a decade of experience spearheading innovative software
-            development projects, I am a forward-thinking Senior Software
-            Engineer known for my ability to bridge the gap between complex
-            technical requirements and non-technical stakeholders. Specializing
-            in full-stack web development with proficiency in TypeScript,
-            NodeJS, MongoDB, SQL, Angular and React, I bring a meticulous and
-            results- driven approach to every project. My leadership extends to
-            forming and guiding high-performing development teams, ensuring
-            project delivery within stringent timelines without compromising
-            quality.
+            With over a decade of experience building and hardening
+            production software, I&apos;m a technical leader concentrated in
+            payment technology for the last several years. I&apos;m the
+            Founder &amp; CEO of SynerSib Consulting SAS, the consulting
+            practice through which I lead engineering work for Strictly, a US
+            payment-technology company, and now incubate a new fintech
+            payment-recovery initiative of my own.
+          </p>
+          <p>
+            At Strictly, I drive architecture and delivery as Senior Software
+            Engineering Manager across the company&apos;s payment gateway,
+            POS terminal, and Practice Manager Enhancer (PME) healthcare
+            platforms. Recent work includes decomposing an oversized,
+            tightly-coupled payment-processor service into focused,
+            independently testable modules; removing circular dependencies
+            from the core terminal service; adding distributed locking and
+            automated monitoring to prevent duplicate transaction settlement;
+            delivering Elavon/ViaConex payment-processor certification
+            requirements; and building FHIR R5-compliant patient-search
+            functionality for the healthcare platform. I also coordinate rapid
+            security-vulnerability remediation across the company&apos;s
+            production services and carry ongoing delivery and
+            production-support ownership across its two largest engineering
+            workstreams.
           </p>
           <h1 className='font-medium underline underline-offset-4'>
             Core Competencies:
           </h1>
           <ul className='mx-4 mt-2 list-disc'>
             <li>
-              <b>Technical Leadership:</b> Proven track record in leading and
-              mentoring cohesive teams for enterprise-wide development projects,
-              ensuring a collaborative and productive work environment.
+              <b>Payment Systems Architecture &amp; Certification:</b> Designs
+              and refactors payment-gateway and POS terminal services
+              (processor integrations, settlement and refund/void
+              correctness, certification cycles) with an emphasis on reducing
+              financial and correctness risk.
             </li>
             <li>
-              <b>Full-Stack Development:</b> Expertise in leveraging a
-              comprehensive stack including TypeScript, NodeJS, MongoDB, SQL,
-              Angular and React to deliver robust and scalable web solutions.
+              <b>Security &amp; Compliance:</b> Coordinates rapid,
+              cross-team vulnerability remediation across production services
+              and drives PCI-compliance-adjacent hardening and documentation.
             </li>
             <li>
-              <b>Strategic Problem-Solving:</b> Ability to analyze development
-              requirements, crafting innovative solutions that enhance
-              operational efficiency and user experience.
+              <b>Healthcare Interoperability:</b> Builds FHIR R5-compliant
+              APIs and data-sync pipelines for a practice-management
+              healthcare platform.
             </li>
             <li>
-              <b>Quality Assurance & Detail Orientation:</b>
-              Commitment to excellence with a meticulous approach to testing and
-              optimization, ensuring software reliability and performance.
+              <b>Full-Stack Development:</b> Ships complete products end to
+              end using TypeScript, NodeJS, Next.js/React, MongoDB, SQL, and
+              Angular, from greenfield internal tools to production platforms.
             </li>
             <li>
-              <b>Time Management & Efficiency:</b> Dynamic and adaptable,
-              consistently meeting tight deadlines in fast-paced environments
-              through strategic planning and priority management.
+              <b>Technical Leadership &amp; Architecture Governance:</b> Leads
+              plan-driven, zero-behavior-change architecture and
+              technical-debt initiatives across core services, untangling
+              module coupling without disrupting production.
+            </li>
+            <li>
+              <b>Founder &amp; Entrepreneurial Leadership:</b> Founded and
+              runs SynerSib Consulting SAS, and is currently incubating a new
+              fintech payment-recovery initiative in its early architecture
+              phase.
             </li>
           </ul>
 
           <p>
-            I am eager to bring my blend of technical expertise, leadership
-            acumen, and strategic problem-solving to a forward-looking company
-            where collaboration and innovation drive success.
+            Earlier in my career I worked as a full-stack engineer and
+            developer at SAM Systems, RefineAI, and XETID, building the
+            TypeScript/Node.js, MongoDB, SQL, and React/Angular foundation
+            that underlies my current architecture and platform work. I&apos;m
+            eager to keep bringing that blend of technical depth, leadership,
+            and strategic problem-solving to ambitious, forward-looking teams.
           </p>
         </article>
 

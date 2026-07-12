@@ -4,11 +4,11 @@
       {
         "id": 1,
         "company": "Strictly",
-        "description": "Led cross-functional teams for successful product launches and updates, enhancing end-user satisfaction. Mentored junior developers and promoted professional growth within the team, resulting in increased productivity levels. Collaborated closely with stakeholders to gather requirements and translate them into technical solutions, aligning business objectives with development efforts.Fostered a culture of learning within the team, encouraging continuous skill development through training programs and industry conferences.",
+        "description": "Serve as Senior Software Engineering Manager driving architecture and delivery across Strictly's payment gateway, POS terminal, and Practice Manager Enhancer (PME) healthcare platforms. Led major architecture-hardening initiatives: decomposed an oversized, tightly-coupled payment-processor service into focused, independently testable modules behind a stable facade; removed circular module dependencies in the core terminal service; and introduced distributed locking with automated monitoring to prevent duplicate settlement of transactions. Delivered Elavon/ViaConex payment-processor certification work (CVV handling, address verification, MOTO compliance) ahead of certification cycles, and built FHIR R5-compliant patient-search functionality for the healthcare platform. Coordinates rapid, cross-team security-vulnerability remediation across the company's production services, and led recent development on an internal analytics and operations tool, including its security-hardening pass. Carries ongoing delivery and production-support ownership across the company's two largest engineering workstreams -- payments/gateway and terminal/POS. Also incubating a new fintech payment-recovery initiative through SynerSib Consulting SAS, currently in its early architecture and foundational-security phase.",
         "url": "https://strictlyzero.com/",
         "role": "Senior Software Engineering Manager",
         "startdate": "2022-12-01",
-        "enddate": "2024-03-13",
+        "enddate": "2026-07-12",
         "companyCountry": "US",
         "active": true
       },
@@ -44,6 +44,17 @@
         "enddate": "2017-03-03",
         "companyCountry": "CU",
         "active": false
+      },
+      {
+        "id": 5,
+        "company": "SynerSib Consulting SAS",
+        "description": "Founded and lead SynerSib Consulting SAS, the consulting practice through which senior software engineering and technical-leadership services are delivered to Strictly's payment-technology platform. Also incubating a new fintech product aimed at helping merchant networks recover failed and overdue customer payments, currently in its early architecture and foundational-security phase.",
+        "url": "https://synersib.com",
+        "role": "Founder & CEO",
+        "startdate": "2022-12-01",
+        "enddate": "2026-07-12",
+        "companyCountry": "UY",
+        "active": true
       }
     ]
   },
