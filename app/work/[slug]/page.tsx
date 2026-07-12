@@ -34,6 +34,23 @@ export async function generateMetadata({
       title: caseStudy.title,
       description: caseStudy.summary,
       url,
+      siteName: 'chaplindev.com',
+      images: [
+        {
+          url: '/og.png',
+          width: 1200,
+          height: 630,
+          alt: 'Frank Corona — Payment Platform Engineering Leader',
+        },
+      ],
+      locale: 'en-US',
+      type: 'article',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: caseStudy.title,
+      description: caseStudy.summary,
+      images: ['/og.png'],
     },
   };
 }

@@ -25,9 +25,10 @@ export const metadata: Metadata = {
     siteName: 'chaplindev.com',
     images: [
       {
-        url: 'https://chaplindev.com/og.png',
-        width: 1920,
-        height: 1080,
+        url: '/og.png',
+        width: 1200,
+        height: 630,
+        alt: 'Frank Corona — Payment Platform Engineering Leader',
       },
     ],
     locale: 'en-US',
@@ -46,7 +47,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     title: 'Frank Corona — Payment Platform Engineering Leader',
+    description,
     card: 'summary_large_image',
+    images: ['/og.png'],
   },
   icons: {
     shortcut: '/favicon.png',
